@@ -31,4 +31,20 @@ jobs:
         restore-keys: ${{ runner.os }}-maven-
 
     - name: Run tests with Maven
-      run: mvn clean install
+      run: mvn clean test -DsuiteXmlFile=testng.xml
+
+    # Upload Surefire reports
+    - name: Upload Surefire Reports
+      uses: actions/upload-artifact@v4
+      if: always()   # ensures upload even if tests fail
+      with:
+        name: surefire-reports
+        path: target/surefire-reports
+
+    # Upload ExtentReports (if generated)
+    - name: Upload ExtentReports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: extent-reports
+        path: target/extent-reports
