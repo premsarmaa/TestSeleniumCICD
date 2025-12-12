@@ -14,15 +14,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import net.bytebuddy.build.Plugin.Factory.UsingReflection.Priority;
-
 public class testCase extends mainMethods {
 
     
 
-    @Test(priority=1, dataProvider="getdata")
+    @Test(dataProvider="getdata")
     public void sampleTest(String name,String classname,String roll) throws InterruptedException {
 
+    screenshot("Google Title");
     String googleSearch="//textarea[@class='gLFyf']";
     String clickSearch="//input[@name='btnK']";
         // add assertions or interactions here
@@ -45,6 +44,7 @@ public class testCase extends mainMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//implicit wait
         Thread.sleep(5);
         unhighlightElementJS(googleSearchBox);
+        org.testng.Assert.fail("Forcing failure to test screenshot listener");
         //alert
         // Alert alert=driver.switchTo().alert();
         // alert.dismiss();
