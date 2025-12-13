@@ -42,14 +42,13 @@ public class DownloadFile {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Wait up to 30 seconds for elements and download
     }
-
-    @Test
+@Test
     public void testFileDownload() {
         // Navigate to a page with sample PDF files
         driver.get("https://filesamples.com/formats/pdf");
 
         // Find the download link for the first sample file on the page
-        WebElement downloadLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt])[1]")));
+        WebElement downloadLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("")));
         
         // Get the expected file name from the same row as the download link
         WebElement fileNameElement = downloadLink.findElement(By.xpath("./ancestor::tr/td[1]"));

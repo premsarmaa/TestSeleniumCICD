@@ -17,8 +17,16 @@ public class mainMethods extends openURL {
         super();
     }
 
+
+
+//     js.executeScript("arguments[0].click();",e);
+//     arguments[0].setAttribute('style','border:solid 5px green');
+// arguments[0].setAttribute('style','');
     public void clickElementJS(WebElement e) {
+        js.executeScript("arguments[0].scrollIntoView(true);", e);
+        js.executeScript("window.scrollBy(0,250)", "");
         js.executeScript("arguments[0].click();",e);
+        
     }
     public void highlightElementJS(WebElement e) {
         js.executeScript("arguments[0].setAttribute('style','border: solid 5px green');",e);

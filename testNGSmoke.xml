@@ -1,0 +1,13 @@
+<suite name="Smoke" , parallels="methods",thread-count="5">
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+                <exclude name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name"src.test.java.Testcase2"/> 
+        </classes>
+    </test>
+</suite>

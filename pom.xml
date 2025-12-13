@@ -54,6 +54,9 @@
                             <goal>enforce</goal>
                         </goals>
                         <configuration>
+                        <suiteXmlFiles>
+                             <suiteXmlFile>testNGSmoke.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                             <rules>
                                 <requireJavaVersion>
                                     <version>[21,)</version>
