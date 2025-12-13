@@ -54,9 +54,6 @@
                             <goal>enforce</goal>
                         </goals>
                         <configuration>
-                        <suiteXmlFiles>
-                             <suiteXmlFile>testNGSmoke.xml</suiteXmlFile>
-                        </suiteXmlFiles>
                             <rules>
                                 <requireJavaVersion>
                                     <version>[21,)</version>
@@ -73,7 +70,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/testNG.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/testNG2.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
